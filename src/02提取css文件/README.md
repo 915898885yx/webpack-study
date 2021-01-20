@@ -3,6 +3,9 @@
 
 css 兼容性处理：postcss --> postcss-loader postcss-preset-env
 帮助 postcss 找到 package.json 中的 browserslist 里面的配置，通过配置加载指定的 css 兼容样式
+
+css 压缩处理：使用插件 optimize-css-assets-webpack-plugin
+
 development\production 是 nodejs 的环境变量 process.env.NODE_ENV = "development"
 "browserslist": {
 "development": [

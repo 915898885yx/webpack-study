@@ -1,6 +1,8 @@
 const { resolve } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+
 process.env.NODE_ENV = "production";
 module.exports = {
     entry: './src/js/index.js',
@@ -35,7 +37,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
-        })
+        }),
+        new OptimizeCssAssetsWebpackPlugin()
     ],
     mode: process.env.NODE_ENV
 }
